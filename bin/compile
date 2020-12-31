@@ -50,6 +50,8 @@ fi
 
 cd $BUILD_DIR
 echo "-----> Bootstrap buildout"
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
 bin/pip install virtualenv
 virtualenv .
 bin/pip install zc.buildout
